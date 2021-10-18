@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for data from different sources</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        
+    </style>
+</head>
+<body class="body" id="body">
+    
+    <div class="popup" id="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close close-popup" id="popup__close">X</a>
+                <div class="popup__elem">
+                    <!-- INFO Encyclopedia -->
+                    <div class="popup__block" id="iframeWikipedia">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeKrugosvet">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeEncyclopedia">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeMegabook">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeMicroexcel">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeGufo">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeHabr">
+                        
+                    </div>
+
+                    <!-- Words - ? -->
+
+                    <div class="popup__block" id="iframeWiktionary">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeKartaslov">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeAcademic">
+                        
+                    </div>
+                    
+                    <!-- Forums -->
+
+                    <div class="popup__block" id="iframeZnanija">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeMail">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeOverflow">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeOverflowRU">
+                        
+                    </div>
+
+                    <!-- NEWSRU -->
+
+                    <div class="popup__block" id="iframeRT">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeMIR24">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeRia">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeRbk">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeGazeta">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeRain">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeChampionat">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeExoMoscow">
+
+                    </div>
+
+
+                    <!-- NEWS -->
+
+                    <div class="popup__block" id="iframeCNN">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeBBC">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeSun">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeTime">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeGoogleNews">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeNewYorkTimes">
+                        
+                    </div>
+
+                    <!-- Searching -->
+
+                    <div class="popup__block" id="iframeGoogle">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeYandex">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeYahoo">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeBing">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeDuckDuckGo">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeASK">
+                        
+                    </div>
+                    
+
+                    <!-- VideoHosting -->
+
+                    <div class="popup__block" id="iframeYoutube">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeVimeo">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeToxicbun">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeRutube">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeVK">
+                        
+                    </div>
+
+
+                    <!-- Films -->
+
+                    <div class="popup__block" id="iframeKinopoisk">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeIVI">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeMegogo">
+                        
+                    </div>
+
+                    <div class="popup__block" id="iframeOKKO">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="backB">
+            <a href="index.html" class="backBTN">Back</a>
+        </div>
+        <div class="blockM">
+            <input type="text" id="search" class="blockM__search" placeholder="Введите текст">
+            <button id="blockBTN" class="blockM__btn popup-link">Готово</button>
+        </div>
+        
+        <div class="blockSource">
+            <div class="blockSource__info card">
+                <h3>Электронные энциклопедии</h3>
+                <div class="check">
+                    <input type="checkbox" class="wikipedia" id="wikipedia">
+                    <label for="wikipedia">Википедия</label>
+                </div>
+                
+        
+                <div class="check">
+                    <input type="checkbox" class="krugosvet" id="krugosvet">
+                    <label for="krugosvet">Кругосвет</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="encyclopedia" id="encyclopedia">
+                    <label for="encyclopedia">Мир энциклопедий</label>
+                </div>
+
+                
+
+                <div class="check">
+                    <input type="checkbox" class="megabook" id="megabook">
+                    <label for="megabook">Megabook</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="microexcel" id="microexcel">
+                    <label for="microexcel">MicroExcel</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="gufo" id="gufo">
+                    <label for="gufo">GUFO.ME</label>
+                </div>
+
+                
+
+                <div class="check">
+                    <input type="checkbox" class="habr" id="habr">
+                    <label for="habr">Хабр</label>
+                </div>
+            </div>
+
+            <div class="blockSource__words card">
+                <h3>ЗНАЧЕНИЕ СЛОВ</h3>
+                <div class="check">
+                    <input type="checkbox" class="wiktionary" id="wiktionary">
+                    <label for="wiktionary">Викисловарь</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="kartaslov" id="kartaslov">
+                    <label for="kartaslov">Картаслов</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="academic" id="academic">
+                    <label for="academic">Академик</label>
+                </div>
+            </div>
+
+            <div class="blockSource__forums card">
+                <h3>ФОРУМЫ</h3>
+                <div class="check">
+                    <input type="checkbox" class="znanija" id="znanija">
+                    <label for="znanija">Знания</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="mail" id="mail">
+                    <label for="mail">Ответы Mail.ru</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="overflow" id="overflow">
+                    <label for="overflow">Stack Overflow</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="overflowRu" id="overflowRu">
+                    <label for="overflowRu">Stack Overflow на русском</label>
+                </div>
+            </div>
+            
+            <div class="blockSource__newsR card">
+                <h3>НОВОСТИ(СМИ РОССИИ)</h3>
+
+                
+                <div class="check">
+                    <input type="checkbox" class="rt" id="rt">
+                    <label for="rt">RT</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="mir" id="mir">
+                    <label for="mir">МИР 24</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="ria" id="ria">
+                    <label for="ria">РИА</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="rbk" id="rbk">
+                    <label for="rbk">РБК</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="gazeta" id="gazeta">
+                    <label for="gazeta">Газета.ру</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="rain" id="rain">
+                    <label for="rain">Дождь</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="championat" id="championat">
+                    <label for="championat">Чемпионат</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="exoMoscow" id="exoMoscow">
+                    <label for="exoMoscow">Эхо Москвы</label>
+                </div>
+
+            </div>
+
+
+
+            <div class="blockSource__news card">
+                <h3>НОВОСТИ(СМИ)</h3>
+
+                <div class="check">
+                    <input type="checkbox" class="cnn" id="cnn">
+                    <label for="cnn">CNN</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="bbc" id="bbc">
+                    <label for="bbc">BBC</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="sun" id="sun">
+                    <label for="sun">The Sun</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="time" id="time">
+                    <label for="time">The Time</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="googleNews" id="googleNews">
+                    <label for="googleNews">Google News</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="NewYorkTimes" id="NewYorkTimes">
+                    <label for="NewYorkTimes">The New York Times</label>
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="blockSource__searchEngines card">
+                <h3>Поисковики</h3>
+                <div class="check">
+                    <input type="checkbox" class="google" id="google">
+                    <label for="google">Google</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="yandex" id="yandex">
+                    <label for="yandex">Yandex</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="yahoo" id="yahoo">
+                    <label for="yahoo">Yahoo!</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="bing" id="bing">
+                    <label for="bing">Bing</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="DuckDuckGo" id="DuckDuckGo">
+                    <label for="DuckDuckGo">DuckDuckGo</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="ask" id="ask">
+                    <label for="ask">ASK</label>
+                </div>
+
+            </div>
+
+            <div class="blockSource__videoHosting card">
+                <h3>ВИДЕОХОСТИНГИ</h3>
+                <div class="check">
+                    <input type="checkbox" class="youtube" id="youtube">
+                    <label for="youtube">Youtube</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="vimeo" id="vimeo">
+                    <label for="vimeo">Vimeo</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="toxicbun" id="toxicbun">
+                    <label for="toxicbun">Toxicbun</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="rutube" id="rutube">
+                    <label for="rutube">Rutube</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="vk" id="vk">
+                    <label for="vk">VK</label>
+                </div>
+            </div>
+
+
+            <div class="blockSource__shop card">
+                <h3>Интернет-магазины</h3>
+                
+                <div class="check">
+                    <input type="checkbox" class="aliexpress" id="aliexpress">
+                    <label for="aliexpress">AliExpress</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="amazon" id="amazon">
+                    <label for="amazon">Amazon</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="ozon" id="ozon">
+                    <label for="ozon">OZON</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="dns" id="dns">
+                    <label for="dns">DNS</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="eldorado" id="eldorado">
+                    <label for="eldorado">Эльдорадо</label>
+                </div>
+            </div>
+
+
+            <div class="blockSource__socialKINO card">
+                <h3>Фильмы, сериалы и т. д.</h3>
+                
+                <div class="check">
+                    <input type="checkbox" class="kinopoisk" id="kinopoisk">
+                    <label for="kinopoisk">КиноПоиск</label>
+                </div>
+                
+                <div class="check">
+                    <input type="checkbox" class="ivi" id="ivi">
+                    <label for="ivi">IVI</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="megogo" id="megogo">
+                    <label for="megogo">Megogo</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" class="okko" id="okko">
+                    <label for="okko">OKKO</label>
+                </div>
+            </div>
+
+
+            
+
+        </div>
+
+        <div class="quest">
+            <div class="quest__inner">
+                <h3 class="quest__title">Открытие источников через новые вкладки или через фрэймы?</h3>
+                <div class="quest__answer">
+                    <input type="checkbox" class="tabsCheck" id="tabsCheck">
+                    <label for="tabsCheck">Вкладки</label>
+                    <input type="checkbox" class="iframeCheck" id="iframeCheck">
+                    <label for="iframeCheck">Фрэймы</label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+
+
+    <script src="js/script.js">
+    </script>
+    <script>
+        require("render.js");
+    </script>
+</body>
+</html>
